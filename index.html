@@ -11,68 +11,22 @@
       background: #f4f6f8;
       margin: 0;
     }
-
     .container {
       max-width: 600px;
-      margin: 50px auto;
+      margin: 40px auto;
       background: #ffffff;
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       overflow: hidden;
       text-align: center;
     }
-
     .header {
       background: linear-gradient(90deg, #007a3d, #f37021);
       color: #fff;
       padding: 18px;
     }
-
-    .header img {
-      width: 65px;
-      margin-bottom: 8px;
-    }
-
     .header h1 { font-size: 22px; margin: 6px 0; }
     .header h3 { font-size: 15px; margin: 0; font-weight: 500; }
-
-    .photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #e5e7eb;
-      margin: 20px auto 10px;
-      display: block;
-    }
-
-    p {
-      padding: 0 24px;
-      color: #666;
-      line-height: 1.6;
-      text-align: justify;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 10px;
-      padding: 14px 28px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 50px;
-      justify-content: center;
-    }
-
-    .btn img {
-      width: 22px;
-      height: 22px;
-    }
-
-    .wa { background: #25D366; }
-    .fb { background: #1877F2; }
 
     .form-box {
       margin: 25px 24px;
@@ -81,28 +35,19 @@
       border-radius: 10px;
       text-align: left;
     }
-
-    .form-box h3 {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-
-    .form-box label {
+    label {
       font-weight: bold;
       display: block;
       margin-top: 12px;
     }
-
-    .form-box input,
-    .form-box select {
+    input, select {
       width: 100%;
       padding: 10px;
       margin-top: 6px;
       border-radius: 6px;
       border: 1px solid #ccc;
     }
-
-    .form-box button {
+    button {
       width: 100%;
       margin-top: 18px;
       padding: 12px;
@@ -114,11 +59,11 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     footer {
       margin: 20px 0;
       font-size: 14px;
-      color: #999;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
@@ -127,36 +72,27 @@
 
 <div class="container">
 
-  <!-- HEADER -->
   <div class="header">
-    <img src="aap-logo.png" alt="AAP Logo">
     <h1>श्री हरिनारायण चौहान</h1>
     <h3>जिला अध्यक्ष – आम आदमी पार्टी, देवरिया</h3>
     <h3>(जनसमर्थन एवं जनसंपर्क)</h3>
   </div>
 
-  <!-- PHOTO -->
-  <img src="harinarayan.jpg" class="photo" alt="Profile Photo">
-
-  <p>
-    यह मंच जनसमर्थन एवं समुदाय सेवा के लिए समर्पित है।
-    आम आदमी पार्टी से जुड़ने हेतु नीचे दिया गया फॉर्म भरें।
-  </p>
-
-  <!-- ✅ FORM (Email + Thank You Page) -->
   <div class="form-box">
-    <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म</h3>
+    <h3 style="text-align:center">आम आदमी पार्टी से जुड़ने हेतु फॉर्म</h3>
 
-    <form action="https://formsubmit.co/chauhanharinarayan84@gmail.com" method="POST">
+    <form action="https://formsubmit.co/chauhanharinarayan84@gmail.com"
+          method="POST"
+          onsubmit="saveData()">
 
-      <!-- REQUIRED SETTINGS -->
+      <!-- FormSubmit Settings -->
       <input type="hidden" name="_subject" value="AAP Join Form – New Submission">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
 
-      <!-- ✅ CHANGE THIS TO YOUR ACTUAL GITHUB URL -->
+      <!-- ✅ CHANGE TO YOUR REAL URL -->
       <input type="hidden" name="_next"
-        value="https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/thankyou.html">
+        value="https://YOUR_USERNAME.github.io/YOUR_REPO/thankyou.html">
 
       <label>पूरा नाम</label>
       <input type="text" name="पूरा नाम" required>
@@ -164,11 +100,8 @@
       <label>पिता का नाम</label>
       <input type="text" name="पिता का नाम" required>
 
-      <label>आधार नंबर</label>
-      <input type="text" name="आधार नंबर" pattern="[0-9]{12}" maxlength="12" required>
-
       <label>मोबाइल नंबर</label>
-      <input type="tel" name="मोबाइल नंबर" required>
+      <input type="tel" name="मोबाइल नंबर" pattern="[0-9]{10}" required>
 
       <label>आप कैसे जुड़ना चाहते हैं?</label>
       <select name="सहयोग प्रकार" required>
@@ -183,25 +116,22 @@
     </form>
   </div>
 
-  <!-- WHATSAPP BUTTON -->
-  <a class="btn wa" href="https://wa.me/919793150845" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-    WhatsApp पर संपर्क करें
-  </a>
-
-  <!-- FACEBOOK BUTTON -->
-  <a class="btn fb"
-     href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
-     target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
-    Facebook पर जुड़ें
-  </a>
-
   <footer>
     © 2026 | जनसमर्थन एवं जनकल्याण
   </footer>
 
 </div>
+
+<script>
+function saveData() {
+  localStorage.setItem("name",
+    document.querySelector('[name="पूरा नाम"]').value);
+  localStorage.setItem("mobile",
+    document.querySelector('[name="मोबाइल नंबर"]').value);
+  localStorage.setItem("role",
+    document.querySelector('[name="सहयोग प्रकार"]').value);
+}
+</script>
 
 </body>
 </html>
