@@ -11,110 +11,79 @@
       background: #f4f6f8;
       margin: 0;
     }
-
     .container {
       max-width: 600px;
-      margin: 50px auto;
+      margin: 40px auto;
       background: #ffffff;
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       overflow: hidden;
       text-align: center;
     }
-
     .header {
       background: linear-gradient(90deg, #007a3d, #f37021);
       color: #fff;
       padding: 18px;
     }
-
-    .header img {
-      width: 65px;
-      margin-bottom: 8px;
+    .header h1 {
+      font-size: 22px;
+      margin: 6px 0;
     }
-
-    .header h1 { font-size: 22px; margin: 6px 0; }
-    .header h3 { font-size: 15px; margin: 0; font-weight: 500; }
-
+    .header h3 {
+      font-size: 15px;
+      margin: 0;
+      font-weight: 500;
+    }
     .photo {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #e5e7eb;
-      margin: 20px auto 10px;
+      border: 4px solid #e5e7eb;
+      margin: 18px auto;
       display: block;
     }
-
     p {
-      padding: 0 24px;
-      color: #666;
+      padding: 0 22px;
+      color: #555;
       line-height: 1.6;
       text-align: justify;
     }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 10px;
-      padding: 14px 28px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 50px;
-      justify-content: center;
-    }
-
-    .btn img {
-      width: 22px;
-      height: 22px;
-    }
-
-    .wa { background: #25D366; }
-    .fb { background: #1877F2; }
-
     .form-box {
-      margin: 25px 24px;
+      margin: 24px;
       padding: 20px;
       border: 1px solid #e5e7eb;
       border-radius: 10px;
       text-align: left;
     }
-
     .form-box h3 {
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-
-    .form-box label {
+    label {
       font-weight: bold;
-      display: block;
       margin-top: 12px;
+      display: block;
     }
-
-    .form-box input,
-    .form-box select {
+    input, select {
       width: 100%;
       padding: 10px;
       margin-top: 6px;
       border-radius: 6px;
       border: 1px solid #ccc;
     }
-
-    .form-box button {
+    button {
       width: 100%;
       margin-top: 18px;
       padding: 12px;
-      font-size: 16px;
       background: #007a3d;
       color: #fff;
       border: none;
       border-radius: 8px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
     }
-
     footer {
       margin: 20px 0;
       font-size: 14px;
@@ -127,36 +96,31 @@
 
 <div class="container">
 
-  <!-- HEADER -->
   <div class="header">
-    <img src="aap-logo.png" alt="AAP Logo">
     <h1>श्री हरिनारायण चौहान</h1>
     <h3>जिला अध्यक्ष – आम आदमी पार्टी, देवरिया</h3>
     <h3>(जनसमर्थन एवं जनसंपर्क)</h3>
   </div>
 
-  <!-- PHOTO -->
-  <img src="harinarayan.jpg" class="photo" alt="Profile Photo">
+  <img src="harinarayan.jpg" alt="Profile Photo" class="photo">
 
   <p>
     यह मंच जनसमर्थन एवं समुदाय सेवा के लिए समर्पित है।
-    आम आदमी पार्टी से जुड़ने हेतु नीचे दिया गया फॉर्म भरें।
+    आम आदमी पार्टी की सदस्यता के लिए नीचे दिया गया फॉर्म भरें।
   </p>
 
-  <!-- ✅ FORM (Email + Thank You Page) -->
   <div class="form-box">
-    <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म</h3>
+    <h3>सदस्यता फॉर्म</h3>
 
     <form action="https://formsubmit.co/chauhanharinarayan84@gmail.com" method="POST">
 
-      <!-- REQUIRED SETTINGS -->
-      <input type="hidden" name="_subject" value="AAP Join Form – New Submission">
+      <input type="hidden" name="_subject" value="AAP Membership Request">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
 
-      <!-- ✅ CHANGE THIS TO YOUR ACTUAL GITHUB URL -->
+      <!-- ✅ CHANGE TO YOUR REAL GITHUB PAGES URL -->
       <input type="hidden" name="_next"
-        value="https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/thankyou.html">
+        value="https://YOUR_USERNAME.github.io/YOUR_REPO/thankyou.html">
 
       <label>पूरा नाम</label>
       <input type="text" name="पूरा नाम" required>
@@ -181,21 +145,11 @@
 
       <button type="submit">फॉर्म सबमिट करें</button>
     </form>
+
+    <p style="font-size:14px;color:#444;margin-top:12px;">
+      ⚠️ नोट: सदस्यता प्रमाणपत्र सत्यापन के बाद जारी किया जाएगा।
+    </p>
   </div>
-
-  <!-- WHATSAPP BUTTON -->
-  <a class="btn wa" href="https://wa.me/919793150845" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-    WhatsApp पर संपर्क करें
-  </a>
-
-  <!-- FACEBOOK BUTTON -->
-  <a class="btn fb"
-     href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
-     target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
-    Facebook पर जुड़ें
-  </a>
 
   <footer>
     © 2026 | जनसमर्थन एवं जनकल्याण
