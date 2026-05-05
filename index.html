@@ -59,6 +59,26 @@
       margin: 20px 0;
     }
 
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 10px;
+      padding: 15px 26px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+    }
+
+    .btn img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .wa { background: #25D366; }
+    .fb { background: #1877F2; }
+
     .form-box {
       margin: 30px 24px;
       padding: 20px;
@@ -87,12 +107,6 @@
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 14px;
-    }
-
-    .form-box small {
-      color: #777;
-      display: block;
-      margin-top: 4px;
     }
 
     .form-box button {
@@ -151,8 +165,7 @@
       <input type="text" id="father" required>
 
       <label>आधार नंबर</label>
-      <input type="text" id="aadhar" pattern="[0-9]{12}" maxlength="12" required>
-      <small>12 अंकों का आधार नंबर दर्ज करें</small>
+      <input type="text" id="aadhar" maxlength="12" pattern="[0-9]{12}" required>
 
       <label>मोबाइल नंबर</label>
       <input type="tel" id="mobile" required>
@@ -167,33 +180,37 @@
     </form>
   </div>
 
+  <!-- WHATSAPP BUTTON -->
+  <a class="btn wa" href="https://wa.me/919793150845" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    WhatsApp पर संपर्क करें
+  </a>
+
+  <!-- FACEBOOK BUTTON -->
+  <a class="btn fb" href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+    Facebook पर जुड़ें
+  </a>
+
   <footer>
     © 2026 | जनसमर्थन एवं जनकल्याण
   </footer>
 
 </div>
 
-<!-- EMAIL SCRIPT -->
 <script>
 function sendEmail() {
-  var name = document.getElementById("name").value;
-  var father = document.getElementById("father").value;
-  var aadhar = document.getElementById("aadhar").value;
-  var mobile = document.getElementById("mobile").value;
-  var address = document.getElementById("address").value;
-  var interest = document.getElementById("interest").value;
-
   var subject = "AAP Join Form – New Submission";
   var body =
-    "नाम: " + name + "%0D%0A" +
-    "पिता का नाम: " + father + "%0D%0A" +
-    "आधार नंबर: " + aadhar + "%0D%0A" +
-    "मोबाइल: " + mobile + "%0D%0A" +
-    "पता: " + address + "%0D%0A" +
-    "जुड़ने की इच्छा: " + interest;
+    "नाम: " + document.getElementById("name").value + "%0D%0A" +
+    "पिता का नाम: " + document.getElementById("father").value + "%0D%0A" +
+    "आधार नंबर: " + document.getElementById("aadhar").value + "%0D%0A" +
+    "मोबाइल: " + document.getElementById("mobile").value + "%0D%0A" +
+    "पता: " + document.getElementById("address").value + "%0D%0A" +
+    "रुचि: " + document.getElementById("interest").value;
 
   window.location.href =
-    "mailto:chauhanharinarayan84@gmail.com" +
+    "mailto:chauhankrishna1996@gmail.com" +
     "?subject=" + encodeURIComponent(subject) +
     "&body=" + body;
 }
