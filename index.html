@@ -14,7 +14,7 @@
 
     .container {
       max-width: 600px;
-      margin: 60px auto;
+      margin: 50px auto;
       background: #ffffff;
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
@@ -37,50 +37,24 @@
     .header h3 { font-size: 15px; margin: 0; font-weight: 500; }
 
     .photo {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid #e5e7eb;
-      margin: 22px auto 12px;
+      margin: 20px auto 10px;
       display: block;
     }
 
     p {
       padding: 0 24px;
       color: #666;
-      line-height: 1.7;
+      line-height: 1.6;
       text-align: justify;
     }
 
-    .phone {
-      font-size: 21px;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 10px;
-      padding: 15px 26px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 999px;
-    }
-
-    .btn img {
-      width: 22px;
-      height: 22px;
-    }
-
-    .wa { background: #25D366; }
-    .fb { background: #1877F2; }
-
     .form-box {
-      margin: 30px 24px;
+      margin: 25px 24px;
       padding: 20px;
       border: 1px solid #e5e7eb;
       border-radius: 10px;
@@ -100,13 +74,15 @@
     }
 
     .form-box input,
-    .form-box textarea {
+    .form-box textarea,
+    .form-box select {
       width: 100%;
       padding: 10px;
       margin-top: 6px;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 14px;
+      background: #fff;
     }
 
     .form-box button {
@@ -147,15 +123,13 @@
   <img src="harinarayan.jpg" class="photo" alt="Profile Photo">
 
   <p>
-    यह मंच जनसमर्थन, सहयोग एवं समुदाय सेवा को समर्पित है।
-    जनहित से जुड़े विषयों के समाधान हेतु आप निःसंकोच संपर्क करें।
+    यह मंच जनसमर्थन एवं समुदाय सेवा को समर्पित है।
+    आम आदमी पार्टी से जुड़ने हेतु नीचे दिया गया फॉर्म भरें।
   </p>
-
-  <div class="phone">📞 संपर्क: 9793150845</div>
 
   <!-- JOIN FORM -->
   <div class="form-box">
-    <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म भरें</h3>
+    <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म</h3>
 
     <form onsubmit="sendEmail(); return false;">
       <label>पूरा नाम</label>
@@ -173,41 +147,35 @@
       <label>पूरा पता</label>
       <textarea id="address" rows="3"></textarea>
 
+      <!-- DROPDOWN OPTIONS -->
       <label>आप कैसे जुड़ना चाहते हैं?</label>
-      <textarea id="interest" rows="3"></textarea>
+      <select id="interest" required>
+        <option value="">— विकल्प चुनें —</option>
+        <option value="सदस्य">सदस्य</option>
+        <option value="वालंटियर">वालंटियर</option>
+        <option value="सोशल मीडिया सहयोग">सोशल मीडिया सहयोग</option>
+        <option value="जनसेवा कार्य">जनसेवा कार्य</option>
+      </select>
 
       <button type="submit">Email भेजें</button>
     </form>
   </div>
 
-  <!-- WHATSAPP BUTTON -->
-  <a class="btn wa" href="https://wa.me/919793150845" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-    WhatsApp पर संपर्क करें
-  </a>
-
-  <!-- FACEBOOK BUTTON -->
-  <a class="btn fb" href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
-    Facebook पर जुड़ें
-  </a>
-
   <footer>
     © 2026 | जनसमर्थन एवं जनकल्याण
   </footer>
-
 </div>
 
 <script>
 function sendEmail() {
   var subject = "AAP Join Form – New Submission";
   var body =
-    "नाम: " + document.getElementById("name").value + "%0D%0A" +
-    "पिता का नाम: " + document.getElementById("father").value + "%0D%0A" +
-    "आधार नंबर: " + document.getElementById("aadhar").value + "%0D%0A" +
-    "मोबाइल: " + document.getElementById("mobile").value + "%0D%0A" +
-    "पता: " + document.getElementById("address").value + "%0D%0A" +
-    "रुचि: " + document.getElementById("interest").value;
+    "नाम: " + name.value + "%0D%0A" +
+    "पिता का नाम: " + father.value + "%0D%0A" +
+    "आधार नंबर: " + aadhar.value + "%0D%0A" +
+    "मोबाइल: " + mobile.value + "%0D%0A" +
+    "पता: " + address.value + "%0D%0A" +
+    "जुड़ने का तरीका: " + interest.value;
 
   window.location.href =
     "mailto:chauhankrishna1996@gmail.com" +
@@ -218,4 +186,3 @@ function sendEmail() {
 
 </body>
 </html>
-``
