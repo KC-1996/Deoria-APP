@@ -8,58 +8,76 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background:#f4f6f8;
-      margin:0;
+      background: #f4f6f8;
+      margin: 0;
     }
+
     .container {
-      max-width:600px;
-      margin:60px auto;
-      background:#fff;
-      padding:28px;
-      text-align:center;
-      border-radius:12px;
-      box-shadow:0 6px 16px rgba(0,0,0,.12);
+      max-width: 600px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 28px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 18px;
+    }
+
     .photo {
-      width:160px;
-      height:160px;
-      object-fit:cover;
-      border-radius:50%;
-      border:4px solid #e5e7eb;
-      margin-bottom:14px;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #e5e7eb;
+      margin-bottom: 14px;
     }
-    h2 { margin:4px 0 10px; color:#555; font-weight:600; }
-    p { color:#666; line-height:1.55; }
+
+    h2 {
+      margin: 6px 0;
+      color: #444;
+      font-weight: 600;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
     .phone {
-      font-size:22px;
-      font-weight:bold;
-      margin:22px 0;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 22px 0;
     }
 
     .btn {
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:18px;
-      padding:18px 26px;
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      border-radius:999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 12px 6px;
+      padding: 16px 26px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
     }
 
-    .wa { background:#25D366; }
-    .fb { background:#1877F2; }
+    .wa { background: #25D366; }
+    .fb { background: #1877F2; }
 
     .btn img {
-      width:22px;
-      height:22px;
+      width: 22px;
+      height: 22px;
     }
 
     footer {
-      margin-top:22px;
-      font-size:14px;
-      color:#999;
+      margin-top: 22px;
+      font-size: 14px;
+      color: #999;
     }
   </style>
 </head>
@@ -74,8 +92,11 @@
 
   <div class="container">
 
-    <!-- Photo -->
-    <img src="harinarayan.jpg" alt="Profile photo" class="photo">
+    <!-- Party Logo -->
+    <img src="aap-logo.png" alt="AAP Deoria Logo" class="logo">
+
+    <!-- Profile Photo -->
+    <img src="harinarayan.jpg" alt="Profile Photo" class="photo">
 
     <h2>श्री हरिनारायण चौहान</h2>
     <h2>जिला अध्यक्ष – आम आदमी पार्टी, देवरिया</h2>
@@ -83,16 +104,18 @@
 
     <p>
       यह मंच जनसमर्थन, सहयोग एवं समुदाय सेवा को समर्पित है।
-      इसका प्रमुख उद्देश्य क्षेत्र के नागरिकों की समस्याओं को ध्यानपूर्वक सुनना,
-      उन्हें संबंधित विभागों एवं मंचों तक पहुँचाने में सहयोग करना तथा सामाजिक,
-      शैक्षणिक एवं विकासात्मक विषयों पर उचित मार्गदर्शन प्रदान करना है। किसी 
-      भी प्रकार के सहयोग, सुझाव, शिकायत अथवा जनहित से जुड़े विषयों के समाधान
-      हेतु नीचे दिए गए संपर्क विवरण केमाध्यम से आप निःसंकोच संपर्क कर सकते हैं।
-      आपकी सक्रिय सहभागिता एवं समर्थन हमारे प्रयासों को और अधिक सशक्त,
-      प्रभावी एवं जनकल्याणकारी बनाता है।
+      इसका प्रमुख उद्देश्य क्षेत्र के नागरिकों की समस्याओं को
+      ध्यानपूर्वक सुनना, उन्हें संबंधित विभागों एवं मंचों तक
+      पहुँचाने में सहयोग करना तथा सामाजिक, शैक्षणिक एवं
+      विकासात्मक विषयों पर उचित मार्गदर्शन प्रदान करना है।
+      किसी भी प्रकार के सहयोग, सुझाव, शिकायत अथवा जनहित
+      से जुड़े विषयों के समाधान हेतु नीचे दिए गए संपर्क
+      विवरण के माध्यम से आप निःसंकोच संपर्क कर सकते हैं।
+      आपकी सक्रिय सहभागिता एवं समर्थन हमारे प्रयासों को
+      और अधिक सशक्त, प्रभावी एवं जनकल्याणकारी बनाता है।
     </p>
 
-    <div class="phone">📞 Contact: 9793150845</div>
+    <div class="phone">📞 संपर्क: 9793150845</div>
 
     <!-- WhatsApp Button -->
     <a class="btn wa"
@@ -104,7 +127,7 @@
       WhatsApp पर संपर्क करें
     </a>
 
-    <!-- Facebook Page Button -->
+    <!-- Facebook Button -->
     <a class="btn fb"
        href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
        target="_blank"
@@ -115,8 +138,10 @@
     </a>
 
     <!-- Facebook Like Button -->
-    <div style="margin-top:22px;">
+    <div style="margin-top: 22px;">
       <div class="fb-like"
            data-href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
            data-layout="button_count"
-           data-action="
+           data-action="like"
+           data-size="small"
+           data-share="true
