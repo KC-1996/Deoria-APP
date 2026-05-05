@@ -53,6 +53,27 @@
       text-align: justify;
     }
 
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px;
+      padding: 14px 28px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      justify-content: center;
+    }
+
+    .btn img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .wa { background: #25D366; }
+    .fb { background: #1877F2; }
+
     .form-box {
       margin: 25px 24px;
       padding: 20px;
@@ -64,7 +85,6 @@
     .form-box h3 {
       text-align: center;
       margin-bottom: 16px;
-      color: #333;
     }
 
     .form-box label {
@@ -81,8 +101,6 @@
       margin-top: 6px;
       border-radius: 6px;
       border: 1px solid #ccc;
-      font-size: 14px;
-      background: #fff;
     }
 
     .form-box button {
@@ -94,15 +112,14 @@
       color: #fff;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
       margin: 20px 0;
       font-size: 14px;
       color: #999;
-      text-align: center;
     }
   </style>
 </head>
@@ -123,7 +140,7 @@
   <img src="harinarayan.jpg" class="photo" alt="Profile Photo">
 
   <p>
-    यह मंच जनसमर्थन एवं समुदाय सेवा को समर्पित है।
+    यह मंच जनसमर्थन एवं समुदाय सेवा के लिए समर्पित है।
     आम आदमी पार्टी से जुड़ने हेतु नीचे दिया गया फॉर्म भरें।
   </p>
 
@@ -139,15 +156,11 @@
       <input type="text" id="father" required>
 
       <label>आधार नंबर</label>
-      <input type="text" id="aadhar" maxlength="12" pattern="[0-9]{12}" required>
+      <input type="text" id="aadhar" pattern="[0-9]{12}" maxlength="12" required>
 
       <label>मोबाइल नंबर</label>
       <input type="tel" id="mobile" required>
 
-      <label>पूरा पता</label>
-      <textarea id="address" rows="3"></textarea>
-
-      <!-- DROPDOWN OPTIONS -->
       <label>आप कैसे जुड़ना चाहते हैं?</label>
       <select id="interest" required>
         <option value="">— विकल्प चुनें —</option>
@@ -161,9 +174,22 @@
     </form>
   </div>
 
+  <!-- WHATSAPP BUTTON -->
+  <a class="btn wa" href="https://wa.me/919793150845" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    WhatsApp पर संपर्क करें
+  </a>
+
+  <!-- FACEBOOK BUTTON -->
+  <a class="btn fb" href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+    Facebook पर जुड़ें
+  </a>
+
   <footer>
     © 2026 | जनसमर्थन एवं जनकल्याण
   </footer>
+
 </div>
 
 <script>
@@ -174,7 +200,6 @@ function sendEmail() {
     "पिता का नाम: " + father.value + "%0D%0A" +
     "आधार नंबर: " + aadhar.value + "%0D%0A" +
     "मोबाइल: " + mobile.value + "%0D%0A" +
-    "पता: " + address.value + "%0D%0A" +
     "जुड़ने का तरीका: " + interest.value;
 
   window.location.href =
