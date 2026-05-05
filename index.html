@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
-<head>
+><html lang="hi">
   <meta charset="UTF-8">
   <title>Public Support – Shri Harinarayan Chauhan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +50,7 @@
       object-fit: cover;
       border: 5px solid #e5e7eb;
       margin: 22px auto 12px;
+      display: block;
     }
 
     p {
@@ -66,22 +66,6 @@
       margin: 20px 0;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 10px;
-      padding: 15px 26px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 999px;
-    }
-
-    .wa { background: #25D366; }
-    .fb { background: #1877F2; }
-
-    /* JOIN FORM */
     .form-box {
       margin: 30px 24px;
       padding: 20px;
@@ -160,30 +144,22 @@
   <div class="form-box">
     <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म भरें</h3>
 
-    <form action="mailto:example@email.com" method="post" enctype="text/plain">
+    <form onsubmit="sendEmail(); return false;">
       <label>पूरा नाम</label>
-      <input type="text" name="Name" required>
+      <input type="text" id="name" required>
 
       <label>मोबाइल नंबर</label>
-      <input type="tel" name="Mobile" required>
+      <input type="tel" id="mobile" required>
 
       <label>पूरा पता</label>
-      <textarea name="Address" rows="3"></textarea>
+      <textarea id="address" rows="3"></textarea>
 
       <label>आप कैसे जुड़ना चाहते हैं?</label>
-      <textarea name="Interest" rows="3"></textarea>
+      <textarea id="interest" rows="3"></textarea>
 
-      <button type="submit">फॉर्म सबमिट करें</button>
+      <button type="submit">Email भेजें</button>
     </form>
   </div>
-
-  <a class="btn wa" href="https://wa.me/919793150845">
-    WhatsApp पर संपर्क करें
-  </a>
-
-  <a class="btn fb" href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr">
-    Facebook पर जुड़ें
-  </a>
 
   <footer>
     © 2026 | जनसमर्थन एवं जनकल्याण
@@ -191,5 +167,28 @@
 
 </div>
 
+<!-- EMAIL SCRIPT -->
+<script>
+function sendEmail() {
+  var name = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var address = document.getElementById("address").value;
+  var interest = document.getElementById("interest").value;
+
+  var subject = "AAP Join Form – New Submission";
+  var body =
+    "नाम: " + name + "%0D%0A" +
+    "मोबाइल: " + mobile + "%0D%0A" +
+    "पता: " + address + "%0D%0A" +
+    "जुड़ने की इच्छा: " + interest;
+
+  window.location.href =
+    "mailto:chauhankrishna1996@gmail.com" +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + body;
+}
+</script>
+
 </body>
 </html>
+
