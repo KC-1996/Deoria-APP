@@ -12,13 +12,20 @@
       margin: 0;
     }
 
-    /* Header Banner */
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      overflow: hidden;
+      text-align: center;
+    }
+
     .header {
       background: linear-gradient(90deg, #007a3d, #f37021);
       color: #fff;
-      padding: 18px 16px;
-      text-align: center;
-      border-radius: 12px 12px 0 0;
+      padding: 18px;
     }
 
     .header img {
@@ -29,7 +36,6 @@
     .header h1 {
       font-size: 22px;
       margin: 6px 0;
-      font-weight: 700;
     }
 
     .header h3 {
@@ -38,47 +44,35 @@
       font-weight: 500;
     }
 
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      background: #ffffff;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-      overflow: hidden;
-    }
-
-    /* Profile Photo */
     .photo {
       width: 160px;
       height: 160px;
-      object-fit: cover;
       border-radius: 50%;
+      object-fit: cover;
       border: 5px solid #e5e7eb;
       margin: 22px auto 12px;
-      display: block;
     }
 
     p {
+      padding: 0 24px;
       color: #666;
       line-height: 1.7;
       text-align: justify;
-      padding: 0 24px;
     }
 
     .phone {
       font-size: 21px;
       font-weight: bold;
-      margin: 22px 0;
+      margin: 20px 0;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 10px 6px;
+      margin: 10px;
       padding: 15px 26px;
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       font-weight: 700;
       border-radius: 999px;
@@ -87,15 +81,55 @@
     .wa { background: #25D366; }
     .fb { background: #1877F2; }
 
-    .btn img {
-      width: 22px;
-      height: 22px;
+    /* JOIN FORM */
+    .form-box {
+      margin: 30px 24px;
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .form-box h3 {
+      text-align: center;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .form-box label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .form-box button {
+      width: 100%;
+      margin-top: 18px;
+      padding: 12px;
+      font-size: 16px;
+      background: #007a3d;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
     }
 
     footer {
-      margin: 24px 0 18px;
+      margin: 20px 0;
       font-size: 14px;
       color: #999;
+      text-align: center;
     }
   </style>
 </head>
@@ -104,7 +138,7 @@
 
 <div class="container">
 
-  <!-- HEADER BANNER -->
+  <!-- HEADER -->
   <div class="header">
     <img src="aap-logo.png" alt="AAP Logo">
     <h1>श्री हरिनारायण चौहान</h1>
@@ -112,34 +146,42 @@
     <h3>(जनसमर्थन एवं जनसंपर्क)</h3>
   </div>
 
-  <!-- PROFILE PHOTO -->
-  <img src="harinarayan.jpg" alt="Profile Photo" class="photo">
+  <!-- PHOTO -->
+  <img src="harinarayan.jpg" class="photo" alt="Profile Photo">
 
   <p>
     यह मंच जनसमर्थन, सहयोग एवं समुदाय सेवा को समर्पित है।
-    इसका प्रमुख उद्देश्य क्षेत्र के नागरिकों की समस्याओं को
-    ध्यानपूर्वक सुनना, उन्हें संबंधित विभागों एवं मंचों तक
-    पहुँचाने में सहयोग करना तथा सामाजिक, शैक्षणिक एवं
-    विकासात्मक विषयों पर उचित मार्गदर्शन प्रदान करना है।
-    किसी भी प्रकार के सहयोग, सुझाव, शिकायत अथवा जनहित
-    से जुड़े विषयों के समाधान हेतु आप निःसंकोच संपर्क करें।
+    जनहित से जुड़े विषयों के समाधान हेतु आप निःसंकोच संपर्क करें।
   </p>
 
   <div class="phone">📞 संपर्क: 9793150845</div>
 
-  <!-- WhatsApp -->
-  <a class="btn wa"
-     href="https://wa.me/919793150845"
-     target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  <!-- JOIN FORM -->
+  <div class="form-box">
+    <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म भरें</h3>
+
+    <form action="mailto:example@email.com" method="post" enctype="text/plain">
+      <label>पूरा नाम</label>
+      <input type="text" name="Name" required>
+
+      <label>मोबाइल नंबर</label>
+      <input type="tel" name="Mobile" required>
+
+      <label>पूरा पता</label>
+      <textarea name="Address" rows="3"></textarea>
+
+      <label>आप कैसे जुड़ना चाहते हैं?</label>
+      <textarea name="Interest" rows="3"></textarea>
+
+      <button type="submit">फॉर्म सबमिट करें</button>
+    </form>
+  </div>
+
+  <a class="btn wa" href="https://wa.me/919793150845">
     WhatsApp पर संपर्क करें
   </a>
 
-  <!-- Facebook -->
-  <a class="btn fb"
-     href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
-     target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+  <a class="btn fb" href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr">
     Facebook पर जुड़ें
   </a>
 
