@@ -94,7 +94,6 @@
     }
 
     .form-box input,
-    .form-box textarea,
     .form-box select {
       width: 100%;
       padding: 10px;
@@ -144,33 +143,43 @@
     आम आदमी पार्टी से जुड़ने हेतु नीचे दिया गया फॉर्म भरें।
   </p>
 
-  <!-- JOIN FORM -->
+  <!-- ✅ FORM (Email + Thank You Page) -->
   <div class="form-box">
     <h3>आम आदमी पार्टी से जुड़ने के लिए फॉर्म</h3>
 
-    <form onsubmit="sendEmail(); return false;">
+    <form action="https://formsubmit.co/chauhankrishna1996@gmail.com" method="POST">
+
+      <!-- REQUIRED SETTINGS -->
+      <input type="hidden" name="_subject" value="AAP Join Form – New Submission">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <!-- ✅ CHANGE THIS TO YOUR ACTUAL GITHUB URL -->
+      <input type="hidden" name="_next"
+        value="https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/thankyou.html">
+
       <label>पूरा नाम</label>
-      <input type="text" id="name" required>
+      <input type="text" name="पूरा नाम" required>
 
       <label>पिता का नाम</label>
-      <input type="text" id="father" required>
+      <input type="text" name="पिता का नाम" required>
 
       <label>आधार नंबर</label>
-      <input type="text" id="aadhar" pattern="[0-9]{12}" maxlength="12" required>
+      <input type="text" name="आधार नंबर" pattern="[0-9]{12}" maxlength="12" required>
 
       <label>मोबाइल नंबर</label>
-      <input type="tel" id="mobile" required>
+      <input type="tel" name="मोबाइल नंबर" required>
 
       <label>आप कैसे जुड़ना चाहते हैं?</label>
-      <select id="interest" required>
+      <select name="सहयोग प्रकार" required>
         <option value="">— विकल्प चुनें —</option>
-        <option value="सदस्य">सदस्य</option>
-        <option value="वालंटियर">वालंटियर</option>
-        <option value="सोशल मीडिया सहयोग">सोशल मीडिया सहयोग</option>
-        <option value="जनसेवा कार्य">जनसेवा कार्य</option>
+        <option>सदस्य</option>
+        <option>वालंटियर</option>
+        <option>सोशल मीडिया सहयोग</option>
+        <option>जनसेवा कार्य</option>
       </select>
 
-      <button type="submit">Email भेजें</button>
+      <button type="submit">फॉर्म सबमिट करें</button>
     </form>
   </div>
 
@@ -181,7 +190,9 @@
   </a>
 
   <!-- FACEBOOK BUTTON -->
-  <a class="btn fb" href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr" target="_blank">
+  <a class="btn fb"
+     href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
+     target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
     Facebook पर जुड़ें
   </a>
@@ -191,23 +202,6 @@
   </footer>
 
 </div>
-
-<script>
-function sendEmail() {
-  var subject = "AAP Join Form – New Submission";
-  var body =
-    "नाम: " + name.value + "%0D%0A" +
-    "पिता का नाम: " + father.value + "%0D%0A" +
-    "आधार नंबर: " + aadhar.value + "%0D%0A" +
-    "मोबाइल: " + mobile.value + "%0D%0A" +
-    "जुड़ने का तरीका: " + interest.value;
-
-  window.location.href =
-    "mailto:chauhankrishna1996@gmail.com" +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + body;
-}
-</script>
 
 </body>
 </html>
