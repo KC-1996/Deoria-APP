@@ -12,44 +12,62 @@
       margin: 0;
     }
 
+    /* Header Banner */
+    .header {
+      background: linear-gradient(90deg, #007a3d, #f37021);
+      color: #fff;
+      padding: 18px 16px;
+      text-align: center;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .header img {
+      width: 65px;
+      margin-bottom: 8px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      margin: 6px 0;
+      font-weight: 700;
+    }
+
+    .header h3 {
+      font-size: 15px;
+      margin: 0;
+      font-weight: 500;
+    }
+
     .container {
       max-width: 600px;
       margin: 60px auto;
       background: #ffffff;
-      padding: 28px;
       text-align: center;
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      overflow: hidden;
     }
 
-    .logo {
-      width: 120px;
-      margin-bottom: 18px;
-    }
-
+    /* Profile Photo */
     .photo {
       width: 160px;
       height: 160px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #e5e7eb;
-      margin-bottom: 14px;
-    }
-
-    h2 {
-      margin: 6px 0;
-      color: #444;
-      font-weight: 600;
+      border: 5px solid #e5e7eb;
+      margin: 22px auto 12px;
+      display: block;
     }
 
     p {
       color: #666;
-      line-height: 1.6;
+      line-height: 1.7;
       text-align: justify;
+      padding: 0 24px;
     }
 
     .phone {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: bold;
       margin: 22px 0;
     }
@@ -58,8 +76,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 12px 6px;
-      padding: 16px 26px;
+      margin: 10px 6px;
+      padding: 15px 26px;
       color: #ffffff;
       text-decoration: none;
       font-weight: 700;
@@ -75,7 +93,7 @@
     }
 
     footer {
-      margin-top: 22px;
+      margin: 24px 0 18px;
       font-size: 14px;
       color: #999;
     }
@@ -84,64 +102,52 @@
 
 <body>
 
-  <!-- Facebook SDK -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/hi_IN/sdk.js#xfbml=1&version=v19.0">
-  </script>
+<div class="container">
 
-  <div class="container">
+  <!-- HEADER BANNER -->
+  <div class="header">
+    <img src="aap-logo.png" alt="AAP Logo">
+    <h1>श्री हरिनारायण चौहान</h1>
+    <h3>जिला अध्यक्ष – आम आदमी पार्टी, देवरिया</h3>
+    <h3>(जनसमर्थन एवं जनसंपर्क)</h3>
+  </div>
 
-    <!-- Party Logo -->
-    <img src="aap-logo.png" alt="AAP Deoria Logo" class="logo">
+  <!-- PROFILE PHOTO -->
+  <img src="harinarayan.jpg" alt="Profile Photo" class="photo">
 
-    <!-- Profile Photo -->
-    <img src="harinarayan.jpg" alt="Profile Photo" class="photo">
+  <p>
+    यह मंच जनसमर्थन, सहयोग एवं समुदाय सेवा को समर्पित है।
+    इसका प्रमुख उद्देश्य क्षेत्र के नागरिकों की समस्याओं को
+    ध्यानपूर्वक सुनना, उन्हें संबंधित विभागों एवं मंचों तक
+    पहुँचाने में सहयोग करना तथा सामाजिक, शैक्षणिक एवं
+    विकासात्मक विषयों पर उचित मार्गदर्शन प्रदान करना है।
+    किसी भी प्रकार के सहयोग, सुझाव, शिकायत अथवा जनहित
+    से जुड़े विषयों के समाधान हेतु आप निःसंकोच संपर्क करें।
+  </p>
 
-    <h2>श्री हरिनारायण चौहान</h2>
-    <h2>जिला अध्यक्ष – आम आदमी पार्टी, देवरिया</h2>
-    <h2>(जनसमर्थन एवं जनसंपर्क)</h2>
+  <div class="phone">📞 संपर्क: 9793150845</div>
 
-    <p>
-      यह मंच जनसमर्थन, सहयोग एवं समुदाय सेवा को समर्पित है।
-      इसका प्रमुख उद्देश्य क्षेत्र के नागरिकों की समस्याओं को
-      ध्यानपूर्वक सुनना, उन्हें संबंधित विभागों एवं मंचों तक
-      पहुँचाने में सहयोग करना तथा सामाजिक, शैक्षणिक एवं
-      विकासात्मक विषयों पर उचित मार्गदर्शन प्रदान करना है।
-      किसी भी प्रकार के सहयोग, सुझाव, शिकायत अथवा जनहित
-      से जुड़े विषयों के समाधान हेतु नीचे दिए गए संपर्क
-      विवरण के माध्यम से आप निःसंकोच संपर्क कर सकते हैं।
-      आपकी सक्रिय सहभागिता एवं समर्थन हमारे प्रयासों को
-      और अधिक सशक्त, प्रभावी एवं जनकल्याणकारी बनाता है।
-    </p>
+  <!-- WhatsApp -->
+  <a class="btn wa"
+     href="https://wa.me/919793150845"
+     target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    WhatsApp पर संपर्क करें
+  </a>
 
-    <div class="phone">📞 संपर्क: 9793150845</div>
+  <!-- Facebook -->
+  <a class="btn fb"
+     href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
+     target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+    Facebook पर जुड़ें
+  </a>
 
-    <!-- WhatsApp Button -->
-    <a class="btn wa"
-       href="https://wa.me/919793150845"
-       target="_blank"
-       rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-           alt="WhatsApp">
-      WhatsApp पर संपर्क करें
-    </a>
+  <footer>
+    © 2026 | जनसमर्थन एवं जनकल्याण
+  </footer>
 
-    <!-- Facebook Button -->
-    <a class="btn fb"
-       href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
-       target="_blank"
-       rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-           alt="Facebook">
-      Facebook पर जुड़ें
-    </a>
+</div>
 
-    <!-- Facebook Like Button -->
-    <div style="margin-top: 22px;">
-      <div class="fb-like"
-           data-href="https://www.facebook.com/share/1AZvdddEDv/?mibextid=wwXIfr"
-           data-layout="button_count"
-           data-action="like"
-           data-size="small"
-           data
+</body>
+</html>
